@@ -1,0 +1,15 @@
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\ConsoleAppEvandro.csproj.AssemblyReference.cache
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\ConsoleAppEvandro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\ConsoleAppEvandro.AssemblyInfoInputs.cache
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\ConsoleAppEvandro.AssemblyInfo.cs
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\ConsoleAppEvandro.csproj.CoreCompileInputs.cache
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\bin\Debug\net6.0\ConsoleAppEvandro.exe
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\bin\Debug\net6.0\ConsoleAppEvandro.deps.json
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\bin\Debug\net6.0\ConsoleAppEvandro.runtimeconfig.json
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\bin\Debug\net6.0\ConsoleAppEvandro.dll
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\bin\Debug\net6.0\ConsoleAppEvandro.pdb
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\ConsoleAppEvandro.dll
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\refint\ConsoleAppEvandro.dll
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\ConsoleAppEvandro.pdb
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\ConsoleAppEvandro.genruntimeconfig.cache
+C:\Users\joaop\source\repos\ConsoleAppEvandro\ConsoleAppEvandro\obj\Debug\net6.0\ref\ConsoleAppEvandro.dll
