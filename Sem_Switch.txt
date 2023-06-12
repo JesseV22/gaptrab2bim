@@ -1,0 +1,286 @@
+namespace ConsoleAppEvandro
+{
+    internal class Program
+    {
+        public class Programa
+        {
+            // Vetores para armazenar os registros em memória
+            static List<Professor> professores = new List<Professor>();
+            static List<Disciplina> disciplinas = new List<Disciplina>();
+            static List<Atribuicao> atribuicoes = new List<Atribuicao>();
+
+            // Rotina para cadastrar um novo professor
+            static void CadastrarProfessor(int codigo, string nome, string endereco)
+            {
+                Professor professor = new Professor
+                {
+                    CodigoProfessor = codigo,
+                    Nome = nome,
+                    Endereco = endereco
+                };
+
+                professores.Add(professor);
+                Console.WriteLine("Professor cadastrado com sucesso!");
+            }
+
+            // Rotina para buscar todos os professores cadastrados
+            static void BuscarProfessores()
+            {
+                foreach (Professor professor in professores)
+                {
+                    Console.WriteLine($"Código: {professor.CodigoProfessor}, Nome: {professor.Nome}, Endereço: {professor.Endereco}");
+                }
+            }
+
+            // Rotina para buscar um professor pelo código
+            static void BuscarProfessorPorCodigo(int codigo)
+            {
+                Professor professor = professores.Find(p => p.CodigoProfessor == codigo);
+                if (professor != null)
+                {
+                    Console.WriteLine($"Código: {professor.CodigoProfessor}, Nome: {professor.Nome}, Endereço: {professor.Endereco}");
+                }
+                else
+                {
+                    Console.WriteLine("Professor não encontrado!");
+                }
+            }
+
+            // Rotina para atualizar os dados de um professor
+            static void AtualizarProfessor(int codigo, string nome, string endereco)
+            {
+                Professor professor = professores.Find(p => p.CodigoProfessor == codigo);
+                if (professor != null)
+                {
+                    professor.Nome = nome;
+                    professor.Endereco = endereco;
+                    Console.WriteLine("Professor atualizado com sucesso!");
+                }
+                else
+                {
+                    Console.WriteLine("Professor não encontrado!");
+                }
+            }
+
+            // Rotina para remover um professor pelo código
+            static void RemoverProfessor(int codigo)
+            {
+                Professor professor = professores.Find(p => p.CodigoProfessor == codigo);
+                if (professor != null)
+                {
+                    professores.Remove(professor);
+                    Console.WriteLine("Professor removido com sucesso!");
+                }
+                else
+                {
+                    Console.WriteLine("Professor não encontrado!");
+                }
+            }
+
+            // Rotina para cadastrar uma nova disciplina
+            static void CadastrarDisciplina(int codigo, string descricao, int cargaHoraria)
+            {
+                Disciplina disciplina = new Disciplina
+                {
+                    CodigoDisciplina = codigo,
+                    Descricao = descricao,
+                    CargaHoraria = cargaHoraria
+                };
+
+                disciplinas.Add(disciplina);
+                Console.WriteLine("Disciplina cadastrada com sucesso!");
+            }
+
+            // Rotina para buscar todas as disciplinas cadastradas
+            static void BuscarDisciplinas()
+            {
+                foreach (Disciplina disciplina in disciplinas)
+                {
+                    Console.WriteLine($"Código: {disciplina.CodigoDisciplina}, Descrição: {disciplina.Descricao}, Carga Horária: {disciplina.CargaHoraria}");
+                }
+            }
+
+            // Rotina para buscar uma disciplina pelo código
+            static void BuscarDisciplinaPorCodigo(int codigo)
+            {
+                Disciplina disciplina = disciplinas.Find(d => d.CodigoDisciplina == codigo);
+                if (disciplina != null)
+                {
+                    Console.WriteLine($"Código: {disciplina.CodigoDisciplina}, Descrição: {disciplina.Descricao}, Carga Horária: {disciplina.CargaHoraria}");
+                }
+                else
+                {
+                    Console.WriteLine("Disciplina não encontrada!");
+                }
+            }
+
+            // Rotina para atualizar os dados de uma disciplina
+            static void AtualizarDisciplina(int codigo, string descricao, int cargaHoraria)
+            {
+                Disciplina disciplina = disciplinas.Find(d => d.CodigoDisciplina == codigo);
+                if (disciplina != null)
+                {
+                    disciplina.Descricao = descricao;
+                    disciplina.CargaHoraria = cargaHoraria;
+                    Console.WriteLine("Disciplina atualizada com sucesso!");
+                }
+                else
+                {
+                    Console.WriteLine("Disciplina não encontrada!");
+                }
+            }
+
+            // Rotina para remover uma disciplina pelo código
+            static void RemoverDisciplina(int codigo)
+            {
+                Disciplina disciplina = disciplinas.Find(d => d.CodigoDisciplina == codigo);
+                if (disciplina != null)
+                {
+                    disciplinas.Remove(disciplina);
+                    Console.WriteLine("Disciplina removida com sucesso!");
+                }
+                else
+                {
+                    Console.WriteLine("Disciplina não encontrada!");
+                }
+            }
+
+            // Rotina para cadastrar uma nova atribuição
+            static void CadastrarAtribuicao(int codigo, DateTime dataAtribuicao, int codigoProfessor, int codigoDisciplina)
+            {
+                Atribuicao atribuicao = new Atribuicao
+                {
+                    CodigoAtribuicao = codigo,
+                    DataAtribuicao = dataAtribuicao,
+                    CodigoProfessor = codigoProfessor,
+                    CodigoDisciplina = codigoDisciplina
+                };
+
+                atribuicoes.Add(atribuicao);
+                Console.WriteLine("Atribuição cadastrada com sucesso!");
+            }
+
+            // Rotina para buscar todas as atribuições cadastradas
+            static void BuscarAtribuicoes()
+            {
+                foreach (Atribuicao atribuicao in atribuicoes)
+                {
+                    Console.WriteLine($"Código: {atribuicao.CodigoAtribuicao}, Data: {atribuicao.DataAtribuicao}, Código do Professor: {atribuicao.CodigoProfessor}, Código da Disciplina: {atribuicao.CodigoDisciplina}");
+                }
+            }
+
+            // Rotina para buscar uma atribuição pelo código
+            static void BuscarAtribuicaoPorCodigo(int codigo)
+            {
+                Atribuicao atribuicao = atribuicoes.Find(a => a.CodigoAtribuicao == codigo);
+                if (atribuicao != null)
+                {
+                    Console.WriteLine($"Código: {atribuicao.CodigoAtribuicao}, Data: {atribuicao.DataAtribuicao}, Código do Professor: {atribuicao.CodigoProfessor}, Código da Disciplina: {atribuicao.CodigoDisciplina}");
+                }
+                else
+                {
+                    Console.WriteLine("Atribuição não encontrada!");
+                }
+            }
+
+            // Rotina para atualizar os dados de uma atribuição
+            static void AtualizarAtribuicao(int codigo, DateTime dataAtribuicao, int codigoProfessor, int codigoDisciplina)
+            {
+                Atribuicao atribuicao = atribuicoes.Find(a => a.CodigoAtribuicao == codigo);
+                if (atribuicao != null)
+                {
+                    atribuicao.DataAtribuicao = dataAtribuicao;
+                    atribuicao.CodigoProfessor = codigoProfessor;
+                    atribuicao.CodigoDisciplina = codigoDisciplina;
+                    Console.WriteLine("Atribuição atualizada com sucesso!");
+                }
+                else
+                {
+                    Console.WriteLine("Atribuição não encontrada!");
+                }
+            }
+
+            // Rotina para remover uma atribuição pelo código
+            static void RemoverAtribuicao(int codigo)
+            {
+                Atribuicao atribuicao = atribuicoes.Find(a => a.CodigoAtribuicao == codigo);
+                if (atribuicao != null)
+                {
+                    atribuicoes.Remove(atribuicao);
+                    Console.WriteLine("Atribuição removida com sucesso!");
+                }
+                else
+                {
+                    Console.WriteLine("Atribuição não encontrada!");
+                }
+            }
+
+            public static void Main(string[] args)
+            {
+                // Exemplo de uso das rotinas para cadastro, busca, atualização e remoção de registros
+
+                // Cadastro de um professor
+                CadastrarProfessor(1, "João", "Rua A");
+                CadastrarProfessor(2, "Maria", "Rua B");
+
+                // Busca de todos os professores cadastrados
+                Console.WriteLine("Professores cadastrados:");
+                BuscarProfessores();
+
+                // Busca de um professor pelo código
+                Console.WriteLine("Buscar professor pelo código:");
+                BuscarProfessorPorCodigo(1);
+
+                // Atualização dos dados de um professor
+                Console.WriteLine("Atualizar professor:");
+                AtualizarProfessor(1, "João Silva", "Rua C");
+
+                // Remoção de um professor pelo código
+                Console.WriteLine("Remover professor:");
+                RemoverProfessor(2);
+
+                // Cadastro de uma disciplina
+                CadastrarDisciplina(1, "Matemática", 60);
+                CadastrarDisciplina(2, "Física", 80);
+
+                // Busca de todas as disciplinas cadastradas
+                Console.WriteLine("Disciplinas cadastradas:");
+                BuscarDisciplinas();
+
+                // Busca de uma disciplina pelo código
+                Console.WriteLine("Buscar disciplina pelo código:");
+                BuscarDisciplinaPorCodigo(1);
+
+                // Atualização dos dados de uma disciplina
+                Console.WriteLine("Atualizar disciplina:");
+                AtualizarDisciplina(1, "Matemática Avançada", 90);
+
+                // Remoção de uma disciplina pelo código
+                Console.WriteLine("Remover disciplina:");
+                RemoverDisciplina(2);
+
+                // Cadastro de uma atribuição
+                CadastrarAtribuicao(1, DateTime.Now, 1, 1);
+                CadastrarAtribuicao(2, DateTime.Now, 2, 2);
+
+                // Busca de todas as atribuições cadastradas
+                Console.WriteLine("Atribuições cadastradas:");
+                BuscarAtribuicoes();
+
+                // Busca de uma atribuição pelo código
+                Console.WriteLine("Buscar atribuição pelo código:");
+                BuscarAtribuicaoPorCodigo(1);
+
+                // Atualização dos dados de uma atribuição
+                Console.WriteLine("Atualizar atribuição:");
+                AtualizarAtribuicao(1, DateTime.Now, 2, 2);
+
+                // Remoção de uma atribuição pelo código
+                Console.WriteLine("Remover atribuição:");
+                RemoverAtribuicao(2);
+            }
+        }
+    }
+}
+
+
